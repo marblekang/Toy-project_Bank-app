@@ -1,15 +1,15 @@
-body{
-  font-family: 'AppleSDGothicNeoL00';
+body {
+  font-family: "AppleSDGothicNeoL00";
 }
 
-.wrap{
-  position:relative;
-  width:375px;
-  height:812px;
-  background: #EEECE5;
+.wrap {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: #eeece5;
 }
 
-.nav{
+.nav {
   position: absolute;
   left: 0%;
   right: 0%;
@@ -17,7 +17,7 @@ body{
   bottom: 94.58%;
 }
 
-.time-style{
+.time-style {
   position: absolute;
   left: 5.6%;
   right: 80%;
@@ -25,15 +25,14 @@ body{
   bottom: 36.36%;
 }
 
-.time{
-
+.time {
   position: absolute;
   height: 20px;
   left: 0%;
   right: 0%;
-  top: calc(50% - 20px/2 + 5.5px);
+  top: calc(50% - 20px / 2 + 5.5px);
 
-  font-family: 'SF Pro Text';
+  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -45,7 +44,7 @@ body{
   color: #000000;
 }
 
-.cel-con{
+.cel-con {
   position: absolute;
   width: 17px;
   height: 10.67px;
@@ -53,7 +52,7 @@ body{
   top: 18px;
 }
 
-.wifi{
+.wifi {
   position: absolute;
   width: 15.33px;
   height: 11px;
@@ -61,7 +60,7 @@ body{
   top: 17.33px;
 }
 
-.battery{
+.battery {
   position: absolute;
   width: 24.33px;
   height: 11.33px;
@@ -69,7 +68,7 @@ body{
   top: 17.33px;
 }
 
-.main{
+.main {
   position: absolute;
   width: 375px;
   height: 680px;
@@ -77,16 +76,15 @@ body{
   top: 56px;
 }
 
-.main .header{
+.main .header {
   position: absolute;
   width: 327px;
   height: 43px;
   left: 27px;
   top: 0px;
-
 }
 
-.header > span{
+.header > span {
   position: absolute;
   width: 49px;
   height: 27px;
@@ -96,26 +94,25 @@ body{
   font-style: normal;
   font-size: 18px;
   line-height: 27px;
-  
+
   text-align: center;
   letter-spacing: -0.24px;
   color: #000000;
 }
 
-.avatar{
+.avatar {
   position: absolute;
   width: 43px;
   height: 43px;
   left: 0px;
   top: 0px;
 
-  border: 1px solid #DCCDB6;
+  border: 1px solid #dccdb6;
   border-radius: 50%;
   box-sizing: border-box;
 }
 
-
-.icon-box{
+.icon-box {
   position: absolute;
   width: 66px;
   height: 24px;
@@ -123,7 +120,7 @@ body{
   top: 9.5px;
 }
 
-.icon-box span:first-child{
+.icon-box span:first-child {
   position: absolute;
   width: 24px;
   height: 21px;
@@ -131,15 +128,15 @@ body{
   top: 1.5px;
 }
 
-.icon-box span:nth-child(2){
+.icon-box span:nth-child(2) {
   position: absolute;
   width: 24px;
-  height:24px;
+  height: 24px;
   left: 42px;
   top: 0px;
 }
 
-.account{
+.account {
   position: absolute;
   width: 375px;
   height: 155px;
@@ -147,50 +144,50 @@ body{
   top: 76px;
 }
 
-.account .board{
+.account .board {
   position: absolute;
   width: 279px;
   height: 155px;
   left: 48px;
   top: 0px;
-  }
+}
 
-.account .board .board_contents{
+.account .board .board_contents {
   position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
 
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
   border-radius: 12px;
 }
 
-.account .board .board_contents span:first-child{
+.account .board .board_contents span:first-child {
   position: absolute;
   left: 26.16%;
   right: 25.26%;
   top: 9.03%;
   bottom: 77.42%;
-/*   font-family: 'Noto Sans KR'; */
+  /*   font-family: 'Noto Sans KR'; */
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  
+
   text-align: center;
   letter-spacing: -0.24px;
   color: #858585;
 }
 
-.account .board .board_contents span:nth-child(2){
+.account .board .board_contents span:nth-child(2) {
   position: absolute;
   width: 26px;
   height: 21px;
   left: 236px;
   top: 14px;
- /*  font-family: 'Noto Sans KR'; */
+  /*  font-family: 'Noto Sans KR'; */
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -200,7 +197,7 @@ body{
   color: #000000;
 }
 
-.account .board .board_contents p{
+.account .board .board_contents p {
   position: absolute;
   left: 21.22%;
   right: 21.22%;
@@ -227,7 +224,7 @@ body{
   top: 32.9%;
   bottom: 43.87%;
 
- /*  font-family: 'Noto Sans KR'; */
+  /*  font-family: 'Noto Sans KR'; */
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -240,50 +237,49 @@ body{
   color: #000000;
 }
 
-.account .board .board_contents input{
-position: absolute;
-width: 202px;
-height: 6px;
-left: 32px;
-top: 110px;
+.account .board .board_contents input {
+  position: absolute;
+  width: 202px;
+  height: 6px;
+  left: 32px;
+  top: 110px;
 
-background: #C4C4C4;
-border-radius: 3px;
+  background: #c4c4c4;
+  border-radius: 3px;
 }
 
-.account .board .board_contents .bar_container{
-position: absolute;
-width: 24px;
-height: 24px;
-left: 241px;
-top: 98px;
+.account .board .board_contents .bar_container {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 241px;
+  top: 98px;
 }
 
-.account .board .board_contents .bar_container > a{
-position: absolute;
-left: 20.83%;
-right: 20.83%;
-top: 20.83%;
-bottom: 20.83%;
+.account .board .board_contents .bar_container > a {
+  position: absolute;
+  left: 20.83%;
+  right: 20.83%;
+  top: 20.83%;
+  bottom: 20.83%;
 }
 
-.account .board .board_contents .balance{
-position: absolute;
-left: 22.04%;
-right: 21.22%;
-top: 82.58%;
-bottom: 3.87%;
+.account .board .board_contents .balance {
+  position: absolute;
+  left: 22.04%;
+  right: 21.22%;
+  top: 82.58%;
+  bottom: 3.87%;
 
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 21px;
+  /* identical to box height */
 
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 21px;
-/* identical to box height */
+  text-align: center;
 
-text-align: center;
-
-color: #858585;
+  color: #858585;
 }
 
 /* .link {
@@ -294,158 +290,158 @@ color: #858585;
   top: 255px;
   } */
 
-.link{
-/* 지금 낮은 이자로 생활대출을 신청하세요! */
+.link {
+  /* 지금 낮은 이자로 생활대출을 신청하세요! */
 
-position: absolute;
-width: 237px;
-height: 21px;
-left:43px;
-top:255px;
-
-
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 21px;
-/* identical to box height */
-
-text-align: center;
-
-color: #000000;
-  }
-
-  .link-a{
-position: absolute;
-width: 19px;
-height: 21px;
-right : 70px;
-top:255px;
-
-
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 21px;
-/* identical to box height */
-
-text-align: center;
-text-decoration-line: underline;
-  }
-
-
-
-.history{
-position: absolute;
-width: 375px;
-height: 383px;
-left: 0px;
-top: 297px;
-
-background: #F5F5F5;
-/* 사용내역 그림자 */
-
-box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
-border-radius: 30px 30px 0px 0px;
-}
-
-.history .slider-container{
-display:flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-width: 106px;
-height: 17px;
-left: 135px;
-top: -3px;
-margin-top: 6.3px;
-
-
-}
-
-.history .slider-container img{
   position: absolute;
-  width:48px;
-  height:2.15px;
+  width: 237px;
+  height: 21px;
+  left: 43px;
+  top: 255px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+
+.link-a {
+  position: absolute;
+  width: 19px;
+  height: 21px;
+  right: 70px;
+  top: 255px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+.history {
+  position: absolute;
+  width: 375px;
+  height: 383px;
+  left: 0px;
+  top: 297px;
+
+  background: #f5f5f5;
+  /* 사용내역 그림자 */
+
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  border-radius: 30px 30px 0px 0px;
+}
+
+.history .slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 106px;
+  height: 17px;
+  left: 135px;
+  top: -3px;
+  margin-top: 6.3px;
+}
+
+.history .slider-container img {
+  position: absolute;
+  width: 48px;
+  height: 2.15px;
   align-items: center;
 }
 
-.piggy-bank{
+.piggy-bank {
   position: absolute;
-width: 308px;
-height: 49px;
-left: 30px;
-top: 23px;
-overflow-x: scroll;
+  width: 308px;
+  height: 49px;
+  left: 30px;
+  top: 23px;
+  overflow-x: scroll;
 }
 
-.piggy-bank .piggy-1{
+.piggy-bank .piggy-1 {
   position: absolute;
-width: 162px;
-height: 47px;
-left: 0px;
-top: 0px;
-background: #DADADA;
-border-radius: 6px;
-
+  width: 162px;
+  height: 47px;
+  left: 0px;
+  top: 0px;
+  background: #dadada;
+  border-radius: 6px;
 }
 
-.piggy-bank .piggy-1 div{
-width:97px;
-height:47px;
-position: absolute;
-left: 0%;
-right: 40.12%;
-top: 0%;
-bottom: 0%;
-
-background: #FF5F00;
-border-radius: 6px 0px 0px 6px;
-}
-
-.piggy-bank .piggy-2{
+.piggy-bank .piggy-1 div {
+  width: 97px;
+  height: 47px;
   position: absolute;
-width: 162px;
-height: 47px;
-left: 175px;
-top: 0px;
-background: #DADADA;
-border-radius: 6px;
+  left: 0%;
+  right: 40.12%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #ff5f00;
+  border-radius: 6px 0px 0px 6px;
 }
 
-.piggy-bank .piggy-2 div{
+.piggy-bank .piggy-2 {
   position: absolute;
-left: 0%;
-right: 25.31%;
-top: 0%;
-bottom: 0%;
-
-background: #FEB700;
-border-radius: 6px 0px 0px 6px;
+  width: 162px;
+  height: 47px;
+  left: 175px;
+  top: 0px;
+  background: #dadada;
+  border-radius: 6px;
 }
 
+.piggy-bank .piggy-2 div {
+  position: absolute;
+  left: 0%;
+  right: 25.31%;
+  top: 0%;
+  bottom: 0%;
 
-
-.bottom-menu{
-position: absolute;
-width: 375px;
-height: 76px;
-top:680px; /* 어케하냐 이거  */
-background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
-display: flex;
-justify-content: center;
-align-items: center;
+  background: #feb700;
+  border-radius: 6px 0px 0px 6px;
 }
 
-.icon-container{
-  width:297px;
-  height:28px;
+.daily-history-container {
+  position: absolute;
+  width: 375px;
+  height: 381px;
+  left: 0px;
+  top: 89px;
+  overflow-y: scroll;
+}
+
+.bottom-menu {
+  position: absolute;
+  width: 375px;
+  height: 76px;
+  top: 680px; /* 어케하냐 이거  */
+  background: linear-gradient(163.63deg, #00bdb2 11.35%, #c4e7b8 139.96%);
   display: flex;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  width: 297px;
+  height: 28px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-.icon{
-  width:28px;
-  height:28px;
+.icon {
+  width: 28px;
+  height: 28px;
 }
