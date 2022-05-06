@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="list">
+    
+  </ul>
+
+
+
+
+  <script>
+/*     const reqUrl = `https://eulsoo.github.io/list.json`;
+    const reqObj = new XMLHttpRequest();
+    reqObj.open('GET',reqUrl);
+    reqObj.responseType = 'json';
+    reqObj.send();
+    reqObj.onload = () => {
+      const obj = reqObj.response;
+      toDo(obj);
+    } */
+
+
+    fetch(`https://eulsoo.github.io/list.json`).then(function(res){
+      console.log(res)
+      return res.json() //json화
+    }).then(function(obj){
+      toDo(obj)
+    })
+
+    
+
+    function toDo(obj){
+      console.log(obj)
+      const ulElement = document.querySelector(".list");
+      
+      for(let i = 0 ; i < obj.length ; i++){
+        //li 만들기
+        const liEl = document.createElement('li');
+        const strongEl = document.createElement('strong');
+        const spanEl = document.createElement('span');
+
+        //item값 가져와서 li에 넣기
+        strongEl.textContent=obj[i].item
+        spanEl.textContent=obj[i].price
+        liEl.appendChild(strongEl);
+        liEl.appendChild(spanEl);
+        // ul에 li 붙이기
+        ulElement.appendChild(liEl);
+      }
+      
+
+    }
+
+    
+  </script>
+</body>
+</html>
