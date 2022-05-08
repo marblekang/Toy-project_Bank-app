@@ -423,6 +423,149 @@ body {
   overflow-y: scroll;
 }
 
+.daily-history {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 302px;
+  height: 709px;
+  left: 36px;
+  top: -1px;
+}
+
+.today-history {
+  /* 사용내역 오늘 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  position: static;
+  width: 302px;
+  height: 231px;
+  left: 0px;
+  top: 0px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 38px 0px;
+}
+
+.history-title {
+  position: static;
+  width: 302px;
+  height: 21px;
+  left: 0px;
+  top: 0px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.date {
+  position: absolute;
+  left: 0%;
+  right: 91.39%;
+  top: 0%;
+  bottom: 0%;
+
+  /* font-family: "Noto Sans CJK KR"; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.sum-spending {
+  position: absolute;
+  left: 68.87%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  /* font-family: "Noto Sans CJK KR"; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #b4b4b4;
+}
+
+.daily-list {
+  position: static;
+  width: 302px;
+  height: 34px;
+  left: 0px;
+  top: 29px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+.daily-list-item {
+  /* 미스터피자 */
+
+  position: absolute;
+  left: 0%;
+  right: 72.52%;
+  top: 0%;
+  bottom: 20.59%;
+
+  /* font-family: "Noto Sans CJK KR"; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  color: #444444;
+}
+
+.daily-list-price {
+  /* 32,000 */
+
+  position: absolute;
+  left: 82.45%;
+  right: 0%;
+  top: 0%;
+  bottom: 20.59%;
+
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #444444;
+}
 .bottom-menu {
   position: absolute;
   width: 375px;
