@@ -1,9 +1,6 @@
 body {
   font-family: "AppleSDGothicNeoL00";
   background-color: #858585;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wrap {
@@ -346,6 +343,11 @@ body {
   border-radius: 30px 30px 0px 0px;
 }
 
+.drag-change {
+  height: 530px;
+  top: 150px;
+}
+
 .history .slider-container {
   display: flex;
   align-items: center;
@@ -431,6 +433,10 @@ body {
   overflow-y: scroll;
 }
 
+.height-change {
+  height: 441px;
+}
+
 .daily-history-container::-webkit-scrollbar {
   display: none;
 }
@@ -473,30 +479,24 @@ body {
 }
 
 .history-title {
-  position: static;
   width: 302px;
   height: 21px;
-  left: 0px;
-  top: 0px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-top: 20px;
 }
 .date {
-  position: absolute;
+  /* position: absolute;
   left: 0%;
   right: 91.39%;
   top: 0%;
-  bottom: 0%;
+  bottom: 0%; */
 
   /* font-family: "Noto Sans CJK KR"; */
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 21px;
   /* identical to box height */
 
@@ -504,16 +504,16 @@ body {
 }
 
 .sum-spending {
-  position: absolute;
+  /*   position: absolute;
   left: 68.87%;
   right: 0%;
   top: 0%;
-  bottom: 0%;
+  bottom: 0%; */
 
   /* font-family: "Noto Sans CJK KR"; */
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 21px;
   /* identical to box height */
 
