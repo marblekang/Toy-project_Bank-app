@@ -1,5 +1,9 @@
 body {
   font-family: "AppleSDGothicNeoL00";
+  background-color: #858585;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrap {
@@ -72,7 +76,7 @@ body {
   position: absolute;
   width: 375px;
   height: 680px;
-  left: 2px;
+
   top: 56px;
 }
 
@@ -370,6 +374,10 @@ body {
   overflow-x: scroll;
 }
 
+.piggy-bank::-webkit-scrollbar {
+  display: none;
+}
+
 .piggy-bank .piggy-1 {
   position: absolute;
   width: 162px;
@@ -417,10 +425,14 @@ body {
 .daily-history-container {
   position: absolute;
   width: 375px;
-  height: 381px;
+  height: 350px;
   left: 0px;
   top: 89px;
   overflow-y: scroll;
+}
+
+.daily-history-container::-webkit-scrollbar {
+  display: none;
 }
 
 .daily-history {
@@ -429,7 +441,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
 
   position: absolute;
   width: 302px;
@@ -446,7 +457,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
 
   position: static;
   width: 302px;
@@ -518,23 +528,26 @@ body {
   height: 34px;
   left: 0px;
   top: 29px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   /* Inside auto layout */
 
   flex: none;
   order: 1;
   flex-grow: 0;
   margin: 8px 0px;
+  border-bottom: 2px solid #dcdcdc;
 }
 
 .daily-list-item {
   /* 미스터피자 */
 
-  position: absolute;
+  /* position: absolute;
   left: 0%;
   right: 72.52%;
   top: 0%;
-  bottom: 20.59%;
+  bottom: 20.59%; */
 
   /* font-family: "Noto Sans CJK KR"; */
   font-style: normal;
@@ -548,14 +561,14 @@ body {
 
 .daily-list-price {
   /* 32,000 */
-
+  /* 
   position: absolute;
   left: 82.45%;
   right: 0%;
   top: 0%;
-  bottom: 20.59%;
+  bottom: 20.59%; */
 
-  font-family: "Noto Sans CJK KR";
+  /*   font-family: "Noto Sans KR"; */
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
@@ -570,7 +583,7 @@ body {
   position: absolute;
   width: 375px;
   height: 76px;
-  top: 680px; /* 어케하냐 이거  */
+  bottom: 0px; /* 어케하냐 이거  */
   background: linear-gradient(163.63deg, #00bdb2 11.35%, #c4e7b8 139.96%);
   display: flex;
   justify-content: center;
@@ -588,4 +601,65 @@ body {
 .icon {
   width: 28px;
   height: 28px;
+}
+
+.background-white {
+  background-color: #ffffff;
+}
+
+.close-btn {
+  position: absolute;
+  width: 26px;
+  height: 21px;
+  left: 336px;
+  top: 44px;
+
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+}
+
+.page-title {
+  /* 지출 관리 */
+
+  position: absolute;
+  width: 93px;
+  height: 36px;
+  left: 30px;
+  top: 77px;
+
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+}
+
+.main-page {
+  position: absolute;
+  width: 375px;
+  height: 623px;
+  left: 0px;
+  top: 113px;
+  overflow-y: scroll;
+}
+
+.main-page .management {
+  position: absolute;
+  width: 348px;
+  height: 1030px;
+  left: 29px;
+  top: 29px;
 }

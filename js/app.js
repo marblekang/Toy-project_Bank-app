@@ -63,45 +63,65 @@ function setClassName(el, name) {
   el.setAttribute("class", name);
 }
  */
-const ulList = document.createElement("ul");
-ulList.setAttribute("class", "ul-list");
 
-const liList = document.createElement("li");
-liList.setAttribute("class", "li-list");
+const dragIcon = document.querySelector(".slider-container img");
+dragIcon.addEventListener("click", function () {
+  console.log("click!");
+});
 
-const historyTitle = document.createElement("div");
-historyTitle.setAttribute("class", "history-title");
+async function fetchList() {
+  let response = await fetch(
+    `https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220508%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220508T122053Z&X-Amz-Expires=86400&X-Amz-Signature=bd8a004f23f2ef917225bce8bd5465e7a47fcac6769dfdbfb44ca0b2a48bcb61&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject`
+  );
+  const obj = await response.json();
+  console.log(obj.bankList[0]);
 
-const date = document.createElement("span");
-date.setAttribute("class", "date");
+  const ulList = document.createElement("ul");
+  ulList.setAttribute("class", "ul-list");
 
-const sumSpending = document.createElement("span");
-sumSpending.setAttribute("class", "sum-spending");
+  const historyTitle = document.createElement("div");
+  historyTitle.setAttribute("class", "history-title");
 
-const dailyList = document.createElement("div");
-dailyList.setAttribute("class", "daily-list");
+  for (let i = 0; i < obj.bankList.length; i++) {
+    const liList = document.createElement("li");
+    liList.setAttribute("class", "li-list");
 
-const item = document.createElement("span");
-item.setAttribute("class", "daily-list-item");
+    const date = document.createElement("span");
+    date.setAttribute("class", "date");
 
-const price = document.createElement("span");
-price.setAttribute("class", "daily-list-price");
+    const sumSpending = document.createElement("span");
+    sumSpending.setAttribute("class", "sum-spending");
 
-const todayHistory = document.querySelector(".today-history");
+    const dailyList = document.createElement("div");
+    dailyList.setAttribute("class", "daily-list");
 
-// append
-todayHistory.appendChild(ulList);
+    let item = document.createElement("span");
+    item.setAttribute("class", "daily-list-item");
 
-ulList.appendChild(liList);
+    let price = document.createElement("span");
+    price.setAttribute("class", "daily-list-price");
 
-liList.appendChild(historyTitle);
+    const todayHistory = document.querySelector(".today-history");
 
-historyTitle.appendChild(date); //오늘 2일전 3일전
+    // append
+    todayHistory.appendChild(ulList);
 
-historyTitle.appendChild(sumSpending); //사용금액 합계
+    ulList.appendChild(liList);
 
-liList.appendChild(dailyList);
+    liList.appendChild(historyTitle);
 
-dailyList.appendChild(item); //건 별 사용내역
+    historyTitle.appendChild(date); //오늘 2일전 3일전
 
-dailyList.appendChild(price); // 건 별 사용금액
+    historyTitle.appendChild(sumSpending); //사용금액 합계
+
+    liList.appendChild(dailyList);
+
+    dailyList.appendChild(item); //건 별 사용내역
+    item.textContent = obj.bankList[i].history;
+    dailyList.appendChild(price); // 건 별 사용금액
+    price.textContent = obj.bankList[i].price;
+    console.log(item);
+  }
+}
+
+fetchList();
