@@ -1,5 +1,21 @@
 // 막대 그래프 차트 만들기
-const Days = ["02", "04", "06", "08", "10", "12", "14", "16", "18", "20", "22"];
+const Days = [
+  "02",
+  "04",
+  "06",
+  "08",
+  "10",
+  "12",
+  "14",
+  "16",
+  "18",
+  "20",
+  "22",
+  "24",
+  "26",
+  "28",
+  "30",
+];
 
 const scatterDataSet = {
   labels: Days,
@@ -7,14 +23,15 @@ const scatterDataSet = {
     {
       type: "bar",
       label: "Bar Dataset",
-      data: [10, 15, 5, 4, 20, 18, 30, 25, 26, 16, 40],
+      data: [10, 15, 5, 4, 20, 18, 30, 25, 26, 16, 40, 30, 25, 26, 16],
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "#38c976",
+      barThickness: 10,
     },
     {
       type: "line",
       label: "Line Dataset",
-      data: [10, 15, 5, 4, 20, 18, 30, 25, 26, 16, 40],
+      data: [10, 15, 5, 4, 20, 18, 30, 25, 26, 16, 40, 30, 25, 26, 16],
       fill: false,
       borderColor: "#FF5F00",
     },
@@ -76,17 +93,34 @@ const spendingList = [
   { item: "상점", price: 46000 },
 ];
 
+const spendingPrice = document.querySelector(".spending-price");
+
+let monthlySum = 0;
+
+console.log(monthlySum);
+
 const itemsContainer = document.querySelector(".spending-items-container");
-itemsContainer.appendChild(items);
-itemsContainer.innerText = "안녕";
 
-const items = document.createElement("div");
-items.classList.add("items-list");
-items.appendChild(itemName);
-items.appendChild(itemPrice);
+for (let i = 0; i < spendingList.length; i++) {
+  monthlySum += spendingList[i].price;
 
-const itemName = document.createElement("span");
-itemName.classList.add("item-name");
+  const items = document.createElement("li");
+  items.classList.add("items-list");
 
-const itemPrice = document.createElement("span");
-itemPrice.classList.add("item-price");
+  itemsContainer.appendChild(items);
+  const itemName = document.createElement("span");
+  itemName.classList.add("item-name");
+  items.appendChild(itemName);
+  itemName.textContent = spendingList[i].item;
+
+  const itemPrice = document.createElement("span");
+  itemPrice.classList.add("item-price");
+  items.appendChild(itemPrice);
+  itemPrice.textContent = spendingList[i].price
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+spendingPrice.textContent = `${monthlySum
+  .toString()
+  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;

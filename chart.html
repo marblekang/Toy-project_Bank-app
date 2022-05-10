@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>expenses</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+    <title>지출관리</title>
   </head>
   <body>
     <div class="wrap background-white">
@@ -20,7 +22,26 @@
       <span class="close-btn">닫기</span>
       <span class="page-title">지출관리</span>
       <div class="main-page">
-        <div class="managemnet"></div>
+        <div class="managemnet">
+          <span class="base-amount-title">기준금액설정</span>
+          <span class="base-amount">2,100,000원</span>
+          <div class="base-amount-bar">
+            <input type="range" class="range-bar" />
+          </div>
+
+          <div class="daily-report-container">
+            <span class="daily-report-title">일간 리포트</span>
+            <div><canvas id="myChart"></canvas></div>
+          </div>
+
+          <span class="spending-patterns-title">6월 지출 패턴</span>
+          <div class="patterns-container">
+            <canvas id="myPattern"></canvas>
+            <span class="spending-price"></span>
+          </div>
+
+          <ul class="spending-items-container"></ul>
+        </div>
       </div>
       <div class="bottom-menu">
         <div class="icon-container">
@@ -31,5 +52,8 @@
         </div>
       </div>
     </div>
+    <!--  -->
+
+    <script src="./js/chart.js"></script>
   </body>
 </html>

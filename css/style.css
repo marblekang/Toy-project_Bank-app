@@ -343,6 +343,27 @@ body {
   border-radius: 30px 30px 0px 0px;
 }
 
+.range-bar {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  -webkit-appearance: none;
+  background: #c4c4c4;
+  cursor: pointer;
+}
+
+.range-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #ff5f00;
+  cursor: pointer;
+  height: 17px;
+  width: 4px;
+  border-radius: 3px;
+  box-shadow: -100vw 0 0 100vw #ffdb4c;
+  border: 0.1px solid #ffdb4c;
+  cursor: pointer;
+}
+
 .drag-change {
   height: 530px;
   top: 150px;
@@ -431,10 +452,6 @@ body {
   left: 0px;
   top: 89px;
   overflow-y: scroll;
-}
-
-.height-change {
-  height: 441px;
 }
 
 .daily-history-container::-webkit-scrollbar {
@@ -614,7 +631,6 @@ body {
   left: 336px;
   top: 44px;
 
-  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -635,7 +651,6 @@ body {
   left: 30px;
   top: 77px;
 
-  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -656,10 +671,180 @@ body {
   overflow-y: scroll;
 }
 
+.main-page::-webkit-scrollbar {
+  display: none;
+}
+
 .main-page .management {
   position: absolute;
   width: 348px;
   height: 1030px;
   left: 29px;
   top: 29px;
+}
+
+.base-amount-title {
+  position: absolute;
+  width: 99px;
+  height: 27px;
+  left: 29px;
+  top: 33px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #444444;
+}
+
+.base-amount {
+  position: absolute;
+  width: 131px;
+  height: 36px;
+  left: 206px;
+  top: 29px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  text-align: right;
+  letter-spacing: -0.24px;
+
+  color: #ff5f00;
+}
+
+.base-amount-bar {
+  position: absolute;
+  width: 308px;
+  height: 28px;
+  left: 29px;
+  top: 88px;
+}
+
+.daily-report-container {
+  overflow-x: scroll;
+}
+.daily-report-container::-webkit-scrollbar {
+  display: none;
+}
+.daily-report-title {
+  position: absolute;
+  width: 86px;
+  height: 27px;
+  left: 29px;
+  top: 175px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #444444;
+}
+
+#myChart {
+  position: absolute;
+  width: 347px;
+  height: 198px;
+  left: 30px;
+  top: 219px;
+}
+
+.spending-patterns-title {
+  position: absolute;
+  width: 100px;
+  height: 27px;
+  left: 30px;
+  top: 463px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #444444;
+}
+
+.patterns-container {
+  position: absolute;
+  width: 308px;
+  height: 308px;
+  left: 36px;
+  top: 508px;
+}
+#myPattern {
+  /* 6월 챠트 */
+}
+
+.spending-price {
+  position: absolute;
+  left: 24.03%;
+  right: 23.84%;
+  top: 47.4%;
+  bottom: 40.91%;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 2px;
+
+  color: #000000;
+}
+
+.spending-items-container {
+  position: absolute;
+  width: 308.18px;
+  height: 237.55px;
+  left: 33.82px;
+  top: 821.45px;
+  padding-left: 0px;
+}
+
+.items-list {
+  width: 303.2px;
+  height: 36.13px;
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+}
+.item-price {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  text-align: right;
+  letter-spacing: -0.24px;
+
+  color: #858585;
 }
