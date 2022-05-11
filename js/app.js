@@ -1,10 +1,10 @@
 // JSON 데이터 바인딩하기
 async function fetchList() {
   let response = await fetch(
-    `https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220508%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220508T122053Z&X-Amz-Expires=86400&X-Amz-Signature=bd8a004f23f2ef917225bce8bd5465e7a47fcac6769dfdbfb44ca0b2a48bcb61&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject`
+    `https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6e4d3d3-c52c-4ea8-b665-968a3b17c5ea/bank.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220510T140623Z&X-Amz-Expires=86400&X-Amz-Signature=191aa55dc0f0643e6eb1c60283f7711460a5ea30e29fe5ce102570fca9e4a64c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bank.json%22&x-id=GetObject`
   );
   const obj = await response.json();
-  console.log(obj.bankList);
+  //console.log(obj.bankList);
 
   //날짜 데이터만 중복 없이 추출
   let newDate;
@@ -32,6 +32,7 @@ async function fetchList() {
     (previousValue, currentValue) => [...previousValue, dateMap[currentValue]],
     []
   );
+  console.log(newSum);
   ////////////////////////
 
   // 날짜별 사용금액 합산한 배열 만들기
@@ -57,9 +58,11 @@ async function fetchList() {
       items[i].push(newSum[i][j].history);
     }
   }
+
+  console.log(items);
   ///////////////////////////////////
 
-  // 날짜별 지출액만 뽑아서 배열로
+  // 사용내역별 지출액만 뽑아서 배열로
   let priceList = []; //30
   for (let i = 0; i < newDate.length; i++) {
     priceList[i] = [];
@@ -67,9 +70,13 @@ async function fetchList() {
       priceList[i].push(newSum[i][j].price);
     }
   }
+
+  console.log(priceList);
+
   /////////////////////////////////
 
   const todayHistory = document.querySelector(".today-history");
+
   for (let i = 0; i < newDate.length; i++) {
     const historyTitle = document.createElement("div");
     historyTitle.setAttribute("class", "history-title");
@@ -129,16 +136,15 @@ async function fetchList() {
       }
     }
   }
-
-  console.log(newSum);
 }
 
 fetchList();
 
-// 드래그 UI
+// 클릭하면 화면 위로 올라가게
 const dragBtn = document.querySelector(".slider-container");
 dragBtn.addEventListener("click", function () {
   document.querySelector(".history").classList.toggle("drag-change");
+  document.querySelector(".daily-history").classList.toggle("height-change");
   document
     .querySelector(".daily-history-container")
     .classList.toggle("height-change");
